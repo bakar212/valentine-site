@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valentine's Day Loading Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body >
+
+<div class="imgContainer" >
+    <img alt="valentine day frame" height="100%" src="inventory/valentine.jpg" width="100%">
+</div>
+
+
+<div class="mainContent">
+    <p id="message">Hey Memi Will You Be My Valentine?
+
+    </p>
+    <a href="page2.html"><button CLASS="button" style="background: greenyellow">YES</button></a>
+    <a><button CLASS="button" style="background: orangered " onclick="noAction()" id="noBtn">NO</button></a>
+
+</div>
+
+
+</body>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+    let messages = ['Are You Sure Memi?','Think Again!!','Are You 100% Positive?','Last Chance!...','Last Last Chance!!!...'];
+    let message = document.getElementById('message');
+    let noBtn = document.getElementById('noBtn');
+
+    let globalCount=0;
+    let size = 38;
+
+    function noAction(){
+
+        if(globalCount === messages.length-1){
+            message.style.color = 'red';//change font color to red to show this is really the last chance!
+        }
+        message.innerHTML = messages[globalCount];
+        message.style.fontSize = size+'px';
+
+        size = size +8;
+        globalCount++;
+
+        if(globalCount === messages.length) {
+            //noBtn.onclick = () => {noBtn.outerHTML='<a href="page3.html"><button CLASS="button" style="background: orangered "  id="noBtn">NO</button></a>'}
+            noBtn.onclick = () => {window.location.href = 'page3.html'}//easier way to implement than above line of code
+        }
+
+
+    }
+</SCRIPT>
+</html>

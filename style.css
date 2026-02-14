@@ -1,0 +1,68 @@
+.mainContent{
+    position: absolute;
+    bottom: 40vh;
+    left: 30vw;
+    width: 50vw;
+    z-index: 800;
+    font-family: "Lucida Console", sans-serif;
+}
+
+.mainContent p{
+    font-size: 30px;
+}
+
+
+
+.button{
+    border-radius: 40px;
+    border-color: slategrey;
+    width: 10vw;
+    height: 7vh;
+    font-size: 26px;
+    position: relative;
+    left:  6vw;
+    margin-left: 1vw;
+}
+
+
+
+.button:hover {
+    border-color:  black;
+    color:  white;
+    cursor: pointer;
+
+}
+
+#title{
+    position: absolute;
+    left: 35vw;
+    top: 10vh;
+    font-size: 38px;
+    font-family: "Lucida Console";
+}
+
+.imgContainer{
+    width: 100vw;
+    height: 100vh;
+}
+
+#message{
+
+    margin-bottom: 2vh;
+}
+
+#firework1{
+    position: absolute;
+    left: 1vw;
+    top: 10vh;
+    height: 80vh;
+    width: 80vw;
+}
+
+#brokenHeart{
+    position: absolute;
+    top: 20vh;
+    left: 45vw;
+    height: 40vh;
+    width: 40vw;
+}
