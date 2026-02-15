@@ -31,5 +31,16 @@ document.addEventListener("click", function () {
         audio.play().catch(err => console.log("Blocked:", err));
     }
 }, { once: true });
+
+window.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const shouldPlay = params.get("play");
+
+    if (shouldPlay === "true") {
+        const audio = document.getElementById("loveAudio");
+        audio.play().catch(err => console.log("Autoplay blocked:", err));
+    }
+});
 </script>    
 </html>
+
